@@ -1,0 +1,13 @@
+<form id="{{ name }}"
+  hx-post="/{{ name }}"
+  hx-trigger="submit, blur from:textarea, blur from:input"§
+  hx-target="this"
+  hx-swap="outerHTML">
+
+  {% if is_list %}
+    <textarea name="text" rows="3" autofocus>{{ text }}</textarea>
+  {% else %}
+    <input name="text" value="{{ text }}" autofocus>
+  {% endif %}
+
+</form>

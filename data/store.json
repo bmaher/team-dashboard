@@ -1,0 +1,12 @@
+{
+  "support_person": "John",
+  "next_demo": "25th March",
+  "next_retro": "1st April",
+  "retro_actions": [
+    "Create a team dashboard",
+    "Have a party"
+  ],
+  "merge_champ": "Peter: 3 MRs",
+  "cycle_time": "5 days",
+  "lead_time": "10 days"
+}

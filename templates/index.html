@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/htmx.org@2.0.8/dist/htmx.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h1>Team Dashboard</h1>
+    <div class="grid-container">
+
+      <div class="grid-item">
+        <h2>Support</h2>
+        <h3>weekly</h3>
+        <div id="support_person"
+          hx-get="/support_person"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h2>Next Demo</h2>
+        <h3>every two weeks</h3>
+        <div id="next_demo"
+          hx-get="/next_demo"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h2>Next Retro</h2>
+        <h3>monthly</h3>
+        <div id="next_retro"
+          hx-get="/next_retro"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h2>Retro Actions</h2>
+        <h3>monthly</h3>
+        <div id="retro_actions"
+          hx-get="/retro_actions"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h2>Cycle Time</h2>
+        <h3>past three months</h3>
+        <div id="cycle_time"
+          hx-get="/cycle_time"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <h2>Lead Time</h2>
+        <h3>past three months</h3>
+        <div id="lead_time"
+          hx-get="/lead_time"
+          hx-trigger="load"
+          hx-swap="outerHTML">
+        </div>
+      </div>
+
+    </div>
+</body>
+</html>
